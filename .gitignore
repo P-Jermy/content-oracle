@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.env.local
+
+# Content project data (user-specific, not part of the skill itself)
+content-projects/
