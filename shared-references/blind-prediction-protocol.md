@@ -1,21 +1,4 @@
-# 盲预测协议
+# Blind Prediction Protocol
 
-## 原则
-
-预测必须在看到任何发布实绩数据**之前**完成。一旦写入 predictions/ 目录：
-
-1. **不可篡改**：预测段（## 盲预测 标题以下所有内容）不得编辑
-2. **只能追加**：新数据追加到 ## 复盘 段
-3. **唯一例外**：重建（reconstruction）场景——实绩数据已知，但记录因故丢失，可在新文件上标记 `reconstructed: true`
-
-## 为什么
-
-- 人脑会在知道结果后无意识地调整记忆
-- 公开记录预测 → 发布结果 → 校准，是唯一能精确追踪判断力进化的方式
-- 允许修改 = 把校准循环降级为"凭感觉的自我安慰"
-
-## 实现
-
-- predictions/ 下的预测文件由 Content Oracle 创建
-- 预测内容创建后不可编辑（由 Hermes agent 遵守，无强制技术锁）
-- 复盘内容追加到预测文件末尾
+Predictions are written BEFORE seeing actual performance data.
+Once written, they are immutable.

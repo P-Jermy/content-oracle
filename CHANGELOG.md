@@ -1,18 +1,20 @@
 # Changelog
 
-## [0.1.0] - 2026-05-25
+## 0.2.0 (2026-05-26)
+- Added: content-shoot (写稿助手)
+- Added: content-status (状态面板)
+- Added: content-retro (复盘)
+- Added: content-seed (种子选题)
+- Added: content-bump (rubric升级)
+- Added: content-persona (读者画像)
+- Added: content-learn (对标学习)
+- Added: content-migrate (版本迁移)
+- Added: content-score-blind (盲打分)
+- Added: hooks system
+- Added: more templates and references
+- Added: starter rubric
+- Fixed: articles/ dir in init
+- Fixed: trends.py dedup + scoring
 
-### Added
-- 初始化内容项目（`content-init`）
-- 多源热点趋势采集（`content-trends`）：GitHub Trending + Hacker News
-- 选题推荐（`content-recommend`）：基于候选池 + 趋势排序
-- rubric 打分框架（`content-score`）
-- 盲预测（`content-predict`）：不可变预测记录
-- 发布登记（`content-publish`）
-- 复盘准备（`content-retro`）
-- 状态看板（`content-status`）
-
-### Infrastructure
-- `.content-state.json` 状态管理
-- 安装/卸载脚本
-- 协议文档（盲预测不可变、状态管理）
+## 0.1.0 (2026-05-25)
+- Initial release with trends/score/predict/publish/recommend

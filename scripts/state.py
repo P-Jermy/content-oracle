@@ -36,6 +36,7 @@ DEFAULT_STATE = {
     "pending_retros": [],
     "consecutive_directional_errors": [],
     "in_progress_session": None,
+    "hooks_enabled": True,
 }
 
 
@@ -76,13 +77,11 @@ def init_project(project_dir: str, content_form: str = "long-essay", rubric: str
     """初始化一个新内容项目"""
     project = Path(project_dir)
     dirs = [
+        project / "articles",
         project / "scripts",
         project / "predictions",
         project / ".content-cache",
     ]
-    for d in dirs:
-        d.mkdir(parents=True, exist_ok=True)
-
     state = dict(DEFAULT_STATE)
     now = datetime.utcnow().isoformat() + "Z"
     state["schema_version"] = STATE_SCHEMA_VERSION
